@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 #include<termios.h>
 #include<unistd.h>
 #include<fcntl.h>
@@ -119,7 +121,7 @@ main()
 do
 {
 	int i,j;
-	textcolor(37);
+        Top:
 	printf("\n\t This program shows calender");
 	printf("\n\ta given month,Enter month,year.....formatis mm-yyyy.\n");
 	while(TRUE)
@@ -169,7 +171,6 @@ do
 			printf("\n\t");
 			textcolor(12);
 			cprintf("%2d",i);
-			textcolor(WHITE);
 		}
 		else
 			printf("%2d",i);
@@ -182,8 +183,6 @@ do
 	textcolor(11);
 	textbackground(9);
 	cprintf("created by:pratap");
-	textcolor(WHITE);
-	textbackground(BLACK);
 	keycode = getkey();
 	if(keycode == 72)
 		year++;
